@@ -60,9 +60,9 @@ def main():
 			with open(html_path,'r') as f: 
 				html_data = f.read()
 			st.components.v1.html(html_data,height=500)
-	except FileNotFoundError:
-		st.warning("HTML file not found: mumbai_property.html - displaying placeholder")
-		st.write("Data visualization would appear here")
+		except FileNotFoundError:
+			st.warning("HTML file not found: mumbai_property.html - displaying placeholder")
+			st.write("Data visualization would appear here")
 		
 		
 		
