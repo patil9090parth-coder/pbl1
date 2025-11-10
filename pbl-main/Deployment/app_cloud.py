@@ -33,45 +33,41 @@ def load_css():
     <style>
     /* Global Styles */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #F5F7FA;
         font-family: 'Inter', sans-serif;
     }
     
     /* Header Styles */
     .main-header {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: #F5F7FA;
         border-radius: 20px;
         padding: 2rem;
         margin: 1rem 0;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(29, 53, 87, 0.1);
     }
     
     .header-title {
         font-size: 3rem;
         font-weight: 700;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #1D3557;
         margin-bottom: 0.5rem;
     }
     
     .header-subtitle {
         font-size: 1.2rem;
-        color: #666;
+        color: #2B2D42;
         margin-bottom: 1rem;
     }
     
     /* Card Styles */
     .metric-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: white;
         border-radius: 15px;
         padding: 1.5rem;
         margin: 0.5rem;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(29, 53, 87, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
@@ -83,13 +79,13 @@ def load_css():
     .metric-value {
         font-size: 2.5rem;
         font-weight: 700;
-        color: #667eea;
+        color: #1D3557;
         margin-bottom: 0.5rem;
     }
     
     .metric-label {
         font-size: 1rem;
-        color: #666;
+        color: #2B2D42;
         margin-bottom: 0.5rem;
     }
     
@@ -100,7 +96,7 @@ def load_css():
     
     /* Button Styles */
     .stButton > button {
-        background: linear-gradient(45deg, #667eea, #764ba2);
+        background: #F45D01;
         color: white;
         border: none;
         border-radius: 25px;
@@ -108,31 +104,32 @@ def load_css():
         font-weight: 600;
         font-size: 1rem;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 4px 16px rgba(244, 93, 1, 0.3);
     }
     
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 8px 32px rgba(244, 93, 1, 0.4);
     }
     
     /* Input Styles */
     .stTextInput > div > div > input,
     .stNumberInput > div > div > input,
     .stSelectbox > div > div > select {
-        background: rgba(255, 255, 255, 0.9);
-        border: 2px solid rgba(102, 126, 234, 0.2);
+        background: white;
+        border: 2px solid rgba(29, 53, 87, 0.2);
         border-radius: 10px;
         padding: 0.75rem;
         font-size: 1rem;
         transition: all 0.3s ease;
+        color: #2B2D42;
     }
     
     .stTextInput > div > div > input:focus,
     .stNumberInput > div > div > input:focus,
     .stSelectbox > div > div > select:focus {
-        border-color: #667eea;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        border-color: #1D3557;
+        box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.1);
     }
     
     /* Sidebar Styles */
@@ -143,18 +140,17 @@ def load_css():
     
     /* Navigation Menu Styles */
     .nav-container {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: white;
         border-radius: 15px;
         padding: 1rem;
         margin-bottom: 2rem;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(29, 53, 87, 0.1);
     }
     
     .nav-button {
         background: transparent;
-        color: #333;
+        color: #2B2D42;
         border: none;
         border-radius: 10px;
         padding: 10px 15px;
@@ -166,12 +162,12 @@ def load_css():
     }
     
     .nav-button:hover {
-        background: rgba(102, 126, 234, 0.1);
-        color: #667eea;
+        background: rgba(29, 53, 87, 0.1);
+        color: #1D3557;
     }
     
     .nav-button.active {
-        background: rgba(102, 126, 234, 0.8);
+        background: #1D3557;
         color: white;
         font-weight: 600;
     }
@@ -305,13 +301,13 @@ def render_header():
         <h1 class="header-title">🏠 RealEstate AI</h1>
         <p class="header-subtitle">Smart Property Price Prediction & Market Intelligence</p>
         <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
-            <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <div style="background: #1D3557; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
                 🔥 99.05% Prediction Accuracy
             </div>
-            <div style="background: rgba(102, 126, 234, 0.1); color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <div style="background: #EBF5FB; color: #2980B9; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
                 📍 6 Major Cities
             </div>
-            <div style="background: rgba(118, 75, 162, 0.1); color: #764ba2; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+            <div style="background: #EBF5FB; color: #2980B9; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
                 ⚡ Real-time Analysis
             </div>
         </div>
@@ -322,7 +318,7 @@ def render_header():
 def render_home():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="text-align: center; color: white; margin-bottom: 2rem;">
+        <h2 style="text-align: center; color: #1D3557; margin-bottom: 2rem;">
             🚀 Welcome to the Future of Real Estate
         </h2>
     </div>
@@ -370,7 +366,7 @@ def render_home():
     # Features section
     st.markdown("""
     <div class="fade-in" style="margin-top: 3rem;">
-        <h3 style="text-align: center; color: white; margin-bottom: 2rem;">
+        <h3 style="text-align: center; color: #1D3557; margin-bottom: 2rem;">
             🌟 Why Choose RealEstate AI?
         </h3>
     </div>
@@ -382,8 +378,8 @@ def render_home():
         st.markdown("""
         <div class="metric-card" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
-            <h4 style="color: #667eea; margin-bottom: 1rem;">AI-Powered Predictions</h4>
-            <p style="color: #666;">Advanced machine learning algorithms provide highly accurate price predictions with confidence intervals.</p>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">AI-Powered Predictions</h4>
+            <p style="color: #2B2D42;">Advanced machine learning algorithms provide highly accurate price predictions with confidence intervals.</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -391,8 +387,8 @@ def render_home():
         st.markdown("""
         <div class="metric-card" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
-            <h4 style="color: #667eea; margin-bottom: 1rem;">Market Intelligence</h4>
-            <p style="color: #666;">Real-time market trends, neighborhood insights, and investment opportunity analysis.</p>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">Market Intelligence</h4>
+            <p style="color: #2B2D42;">Real-time market trends, neighborhood insights, and investment opportunity analysis.</p>
         </div>
         """, unsafe_allow_html=True)
     
@@ -400,8 +396,8 @@ def render_home():
         st.markdown("""
         <div class="metric-card" style="text-align: center;">
             <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-            <h4 style="color: #667eea; margin-bottom: 1rem;">Personalized Experience</h4>
-            <p style="color: #666;">Tailored recommendations based on your preferences and investment goals.</p>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">Personalized Experience</h4>
+            <p style="color: #2B2D42;">Tailored recommendations based on your preferences and investment goals.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -409,7 +405,7 @@ def render_home():
 def render_market_insights():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="color: white; margin-bottom: 2rem;">📈 Market Intelligence Dashboard</h2>
+        <h2 style="color: #1D3557; margin-bottom: 2rem;">📈 Market Intelligence Dashboard</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -423,12 +419,12 @@ def render_market_insights():
         # Price distribution by location
         fig = px.box(df, x='Location', y='Total_Price', 
                      title='Property Price Distribution by Location',
-                     color_discrete_sequence=['#667eea'])
+                     color_discrete_sequence=['#1D3557'])
         fig.update_layout(
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white'),
-            title_font=dict(size=18, color='white')
+            font=dict(color='#2B2D42'),
+            title_font=dict(size=18, color='#1D3557')
         )
         st.plotly_chart(fig, use_container_width=True)
     
@@ -437,19 +433,19 @@ def render_market_insights():
         fig = px.scatter(df, x='Area_sqft', y='Price_per_sqft', 
                         color='Location', size='Bedrooms',
                         title='Price per Sqft vs Area Analysis',
-                        color_discrete_sequence=px.colors.qualitative.Set3)
+                        color_discrete_sequence=['#1D3557', '#2980B9', '#F45D01', '#1E8449', '#2B2D42', '#667eea'])
         fig.update_layout(
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white'),
-            title_font=dict(size=18, color='white')
+            font=dict(color='#2B2D42'),
+            title_font=dict(size=18, color='#1D3557')
         )
         st.plotly_chart(fig, use_container_width=True)
     
     # Market trends
     st.markdown("""
     <div class="fade-in" style="margin-top: 2rem;">
-        <h3 style="color: white; margin-bottom: 1rem;">📊 Market Trends</h3>
+        <h3 style="color: #1D3557; margin-bottom: 1rem;">📊 Market Trends</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -469,13 +465,13 @@ def render_market_insights():
     
     fig.add_trace(
         go.Scatter(x=trend_data['Date'], y=trend_data['Avg_Price'], 
-                  mode='lines+markers', name='Avg Price', line=dict(color='#667eea', width=3)),
+                  mode='lines+markers', name='Avg Price', line=dict(color='#1D3557', width=3)),
         row=1, col=1
     )
     
     fig.add_trace(
         go.Bar(x=trend_data['Date'], y=trend_data['Volume'], 
-               name='Volume', marker_color='#764ba2'),
+               name='Volume', marker_color='#2980B9'),
         row=2, col=1
     )
     
@@ -483,8 +479,8 @@ def render_market_insights():
         height=600,
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
-        font=dict(color='white'),
-        title_font=dict(size=18, color='white')
+        font=dict(color='#2B2D42'),
+        title_font=dict(size=18, color='#1D3557')
     )
     
     st.plotly_chart(fig, use_container_width=True)
@@ -493,7 +489,7 @@ def render_market_insights():
 def render_price_predictor():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="color: white; margin-bottom: 2rem;">🤖 AI Price Predictor</h2>
+        <h2 style="color: #1D3557; margin-bottom: 2rem;">🤖 AI Price Predictor</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -502,7 +498,7 @@ def render_price_predictor():
     with col1:
         st.markdown("""
         <div class="metric-card">
-            <h4 style="color: #667eea; margin-bottom: 1rem;">🏠 Property Details</h4>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">🏠 Property Details</h4>
         </div>
         """, unsafe_allow_html=True)
         
@@ -530,7 +526,7 @@ def render_price_predictor():
     with col2:
         st.markdown("""
         <div class="metric-card">
-            <h4 style="color: #667eea; margin-bottom: 1rem;">💰 Price Prediction</h4>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">💰 Price Prediction</h4>
         </div>
         """, unsafe_allow_html=True)
         
@@ -561,10 +557,10 @@ def render_price_predictor():
                 st.success("✅ Prediction Complete!")
                 
                 st.markdown(f"""
-                <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin: 1rem 0;">
-                    <h3 style="margin: 0; font-size: 1.5rem;">💰 Predicted Price</h3>
-                    <h2 style="margin: 0.5rem 0; font-size: 2.5rem; font-weight: 700;">₹{total_price:,.0f}</h2>
-                    <p style="margin: 0; opacity: 0.9;">₹{price_per_sqft:,} per sq ft • {area:,} sq ft</p>
+                <div style="background: #EBF9F1; color: #1E8449; padding: 1.5rem; border-radius: 15px; margin: 1rem 0; border: 1px solid rgba(30, 132, 73, 0.2);">
+                    <h3 style="margin: 0; font-size: 1.5rem; color: #1E8449;">💰 Predicted Price</h3>
+                    <h2 style="margin: 0.5rem 0; font-size: 2.5rem; font-weight: 700; color: #1E8449;">₹{total_price:,.0f}</h2>
+                    <p style="margin: 0; color: #1E8449;">₹{price_per_sqft:,} per sq ft • {area:,} sq ft</p>
                 </div>
                 """, unsafe_allow_html=True)
                 
@@ -602,7 +598,7 @@ def render_price_predictor():
 def render_property_compare():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="color: white; margin-bottom: 2rem;">⚖️ Property Comparison Tool</h2>
+        <h2 style="color: #1D3557; margin-bottom: 2rem;">⚖️ Property Comparison Tool</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -611,7 +607,7 @@ def render_property_compare():
     with col1:
         st.markdown("""
         <div class="metric-card">
-            <h4 style="color: #667eea; margin-bottom: 1rem;">Property A</h4>
+            <h4 style="color: #1D3557; margin-bottom: 1rem;">Property A</h4>
         </div>
         """, unsafe_allow_html=True)
         
@@ -624,7 +620,7 @@ def render_property_compare():
     with col2:
         st.markdown("""
         <div class="metric-card">
-            <h4 style="color: #764ba2; margin-bottom: 1rem;">Property B</h4>
+            <h4 style="color: #2980B9; margin-bottom: 1rem;">Property B</h4>
         </div>
         """, unsafe_allow_html=True)
         
@@ -637,10 +633,10 @@ def render_property_compare():
     # Comparison analysis
     if st.button("🔍 Analyze Comparison", use_container_width=True):
         st.markdown("""
-        <div class="fade-in" style="margin-top: 2rem;">
-            <h3 style="color: white; margin-bottom: 1rem;">📊 Comparison Analysis</h3>
-        </div>
-        """, unsafe_allow_html=True)
+            <div class="fade-in" style="margin-top: 2rem;">
+                <h3 style="color: #1D3557; margin-bottom: 1rem;">📊 Comparison Analysis</h3>
+            </div>
+            """, unsafe_allow_html=True)
         
         col3, col4 = st.columns(2)
         
@@ -678,13 +674,13 @@ def render_property_compare():
         
         fig.add_trace(
             go.Bar(x=comparison_data['Property'], y=comparison_data['Total Price'],
-                   marker_color=['#667eea', '#764ba2'], name='Total Price'),
+                   marker_color=['#1D3557', '#2980B9'], name='Total Price'),
             row=1, col=1
         )
         
         fig.add_trace(
             go.Bar(x=comparison_data['Property'], y=comparison_data['Price per sq ft'],
-                   marker_color=['#667eea', '#764ba2'], name='Price per sq ft'),
+                   marker_color=['#1D3557', '#2980B9'], name='Price per sq ft'),
             row=1, col=2
         )
         
@@ -692,8 +688,8 @@ def render_property_compare():
             height=400,
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='white'),
-            title_font=dict(size=16, color='white')
+            font=dict(color='#2B2D42'),
+            title_font=dict(size=16, color='#1D3557')
         )
         
         st.plotly_chart(fig, use_container_width=True)
@@ -702,7 +698,7 @@ def render_property_compare():
 def render_favorites():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="color: white; margin-bottom: 2rem;">❤️ Saved Predictions</h2>
+        <h2 style="color: #1D3557; margin-bottom: 2rem;">❤️ Saved Predictions</h2>
     </div>
     """, unsafe_allow_html=True)
     
@@ -712,7 +708,7 @@ def render_favorites():
     
     st.markdown(f"""
     <div class="metric-card">
-        <h4 style="color: #667eea;">You have {len(st.session_state.predictions)} saved predictions</h4>
+        <h4 style="color: #1D3557;">You have {len(st.session_state.predictions)} saved predictions</h4>
     </div>
     """, unsafe_allow_html=True)
     
@@ -740,13 +736,13 @@ def render_favorites():
 def render_about():
     st.markdown("""
     <div class="fade-in">
-        <h2 style="color: white; margin-bottom: 2rem;">ℹ️ About RealEstate AI</h2>
+        <h2 style="color: #1D3557; margin-bottom: 2rem;">ℹ️ About RealEstate AI</h2>
     </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
     <div class="metric-card">
-        <h3 style="color: #667eea; margin-bottom: 1rem;">🏠 About This Platform</h3>
+        <h3 style="color: #1D3557; margin-bottom: 1rem;">🏠 About This Platform</h3>
         <p style="color: #666; line-height: 1.6;">
             RealEstate AI is an advanced property price prediction platform that leverages cutting-edge 
             machine learning algorithms to provide accurate real estate valuations. Our platform analyzes 
@@ -754,7 +750,7 @@ def render_about():
             amenities to deliver precise price predictions with confidence intervals.
         </p>
         
-        <h4 style="color: #667eea; margin: 2rem 0 1rem 0;">🌟 Key Features</h4>
+        <h4 style="color: #1D3557; margin: 2rem 0 1rem 0;">🌟 Key Features</h4>
         <ul style="color: #666; line-height: 1.8;">
             <li><strong>AI-Powered Predictions:</strong> Advanced ML algorithms with 99.05% accuracy</li>
             <li><strong>Market Intelligence:</strong> Real-time market trends and neighborhood insights</li>
@@ -764,43 +760,43 @@ def render_about():
             <li><strong>Mobile Responsive:</strong> Optimized for all devices</li>
         </ul>
         
-        <h4 style="color: #667eea; margin: 2rem 0 1rem 0;">🤖 Technology Stack</h4>
+        <h4 style="color: #1D3557; margin: 2rem 0 1rem 0;">🤖 Technology Stack</h4>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
             <div style="background: rgba(102, 126, 234, 0.1); padding: 1rem; border-radius: 10px;">
-                <strong style="color: #667eea;">Frontend:</strong><br>
+                <strong style="color: #1D3557;">Frontend:</strong><br>
                 <span style="color: #666;">Streamlit, Plotly, Folium</span>
             </div>
             <div style="background: rgba(118, 75, 162, 0.1); padding: 1rem; border-radius: 10px;">
-                <strong style="color: #764ba2;">Backend:</strong><br>
+                <strong style="color: #2980B9;">Backend:</strong><br>
                 <span style="color: #666;">Python, Pandas, NumPy</span>
             </div>
             <div style="background: rgba(102, 126, 234, 0.1); padding: 1rem; border-radius: 10px;">
-                <strong style="color: #667eea;">ML Models:</strong><br>
+                <strong style="color: #1D3557;">ML Models:</strong><br>
                 <span style="color: #666;">Random Forest, XGBoost, Neural Networks</span>
             </div>
             <div style="background: rgba(118, 75, 162, 0.1); padding: 1rem; border-radius: 10px;">
-                <strong style="color: #764ba2;">Data Sources:</strong><br>
+                <strong style="color: #2980B9;">Data Sources:</strong><br>
                 <span style="color: #666;">Real estate APIs, Market data</span>
             </div>
         </div>
         
-        <h4 style="color: #667eea; margin: 2rem 0 1rem 0;">📊 Model Performance</h4>
+        <h4 style="color: #1D3557; margin: 2rem 0 1rem 0;">📊 Model Performance</h4>
         <div style="background: rgba(255, 255, 255, 0.5); padding: 1.5rem; border-radius: 15px;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
                 <div>
-                    <div style="font-size: 2rem; font-weight: 700; color: #667eea;">99.05%</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: #1D3557;">99.05%</div>
                     <div style="color: #666; font-size: 0.9rem;">Prediction Accuracy</div>
                 </div>
                 <div>
-                    <div style="font-size: 2rem; font-weight: 700; color: #764ba2;">1,247</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: #2980B9;">1,247</div>
                     <div style="color: #666; font-size: 0.9rem;">Properties Analyzed</div>
                 </div>
                 <div>
-                    <div style="font-size: 2rem; font-weight: 700; color: #667eea;">6</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: #1D3557;">6</div>
                     <div style="color: #666; font-size: 0.9rem;">Major Cities</div>
                 </div>
                 <div>
-                    <div style="font-size: 2rem; font-weight: 700; color: #764ba2;">4.8★</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: #2980B9;">4.8★</div>
                     <div style="color: #666; font-size: 0.9rem;">User Rating</div>
                 </div>
             </div>
