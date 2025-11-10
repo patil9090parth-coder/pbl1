@@ -142,6 +142,33 @@ def load_css():
         backdrop-filter: blur(10px);
     }
     
+    /* Navigation Menu Styles */
+    .nav-link {
+        color: #333 !important;
+        font-weight: 500 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .nav-link:hover {
+        color: #667eea !important;
+        background-color: rgba(102, 126, 234, 0.1) !important;
+    }
+    
+    .nav-link-selected {
+        color: white !important;
+        background-color: rgba(102, 126, 234, 0.8) !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Ensure navbar container has proper background */
+    .st-emotion-cache-1vze0hz {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+    
     /* Animation Classes */
     .fade-in {
         animation: fadeIn 0.6s ease-in;
@@ -189,6 +216,45 @@ def load_css():
     
     ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(45deg, #764ba2, #667eea);
+    }
+    
+    /* Streamlit Option Menu Overrides */
+    .st-emotion-cache-1vze0hz {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding: 10px !important;
+    }
+    
+    .st-emotion-cache-1vze0hz .nav-link {
+        color: #333 !important;
+        font-weight: 500 !important;
+        background-color: transparent !important;
+        border-radius: 10px !important;
+        margin: 2px !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .st-emotion-cache-1vze0hz .nav-link:hover {
+        color: #667eea !important;
+        background-color: rgba(102, 126, 234, 0.1) !important;
+    }
+    
+    .st-emotion-cache-1vze0hz .nav-link.active {
+        color: white !important;
+        background-color: rgba(102, 126, 234, 0.8) !important;
+        font-weight: 600 !important;
+    }
+    
+    .st-emotion-cache-1vze0hz .nav-link .icon {
+        color: #667eea !important;
+        font-size: 16px !important;
+    }
+    
+    .st-emotion-cache-1vze0hz .nav-link.active .icon {
+        color: white !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -262,19 +328,34 @@ def render_navigation():
         default_index=0,
         orientation="horizontal",
         styles={
-            "container": {"padding": "0!important", "background-color": "rgba(255,255,255,0.1)", "border-radius": "15px"},
-            "icon": {"color": "white", "font-size": "16px"},
+            "container": {
+                "padding": "0!important", 
+                "background-color": "rgba(255,255,255,0.95)", 
+                "border-radius": "15px",
+                "backdrop-filter": "blur(10px)",
+                "box-shadow": "0 4px 16px rgba(0, 0, 0, 0.1)",
+                "border": "1px solid rgba(255, 255, 255, 0.2)"
+            },
+            "icon": {"color": "#667eea", "font-size": "16px"},
             "nav-link": {
                 "font-size": "14px",
                 "text-align": "center",
                 "margin": "0px",
                 "padding": "10px 15px",
                 "border-radius": "10px",
-                "color": "white",
-                "background-color": "transparent"
+                "color": "#333",
+                "background-color": "transparent",
+                "transition": "all 0.3s ease"
             },
-            "nav-link-selected": {"background-color": "rgba(102, 126, 234, 0.8)", "color": "white"},
-            "nav-link-hover": {"background-color": "rgba(255,255,255,0.2)"}
+            "nav-link-selected": {
+                "background-color": "rgba(102, 126, 234, 0.8)", 
+                "color": "white",
+                "font-weight": "600"
+            },
+            "nav-link-hover": {
+                "background-color": "rgba(102, 126, 234, 0.1)",
+                "color": "#667eea"
+            }
         }
     )
     st.session_state.page = selected
